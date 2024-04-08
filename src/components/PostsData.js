@@ -11,7 +11,7 @@ const PostsData = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
-        const url = `http://localhost:5050/`;
+        const url = `https://backend-app-lazy-f94aefb55340.herokuapp.com/`;
         fetch(url)
             .then((response) => response.json())
             .then((data) => { setBlogPosts(data) })
