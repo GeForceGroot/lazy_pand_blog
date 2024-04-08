@@ -24,7 +24,7 @@ const CreatePost = () => {
     };
 
     const addNewBlog = async () => {
-        const response = await fetch(`http://localhost:5050/api/createPost`, reqData);
+        const response = await fetch(`https://backend-app-lazy-f94aefb55340.herokuapp.com/api/createPost`, reqData);
         const data = await response.json();
         console.log(data);
         const name = document.getElementById('usernameInp')
