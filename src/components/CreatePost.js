@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function useInatialInputs(initalInput) {
@@ -26,6 +28,7 @@ const CreatePost = () => {
     const addNewBlog = async () => {
         const response = await fetch(`https://backend-app-lazy-f94aefb55340.herokuapp.com/api/createPost`, reqData);
         const data = await response.json();
+        toast("Blog Added Succesfully")
         console.log(data);
         const name = document.getElementById('usernameInp')
         const tit = document.getElementById('titleInp')
@@ -38,8 +41,9 @@ const CreatePost = () => {
 
     return (
         <>
+            <ToastContainer />
             <div className='container'>
-                <form style={{ marginTop: "50px",marginBottom:'125px', border: "2px solid black", borderRadius: "10px   ", padding: "50px", backgroundColor: "#000000A6", visibility:"visible", opacity:".85" }} >
+                <form style={{ marginTop: "50px", marginBottom: '125px', border: "2px solid black", borderRadius: "10px   ", padding: "50px", backgroundColor: "#000000A6", visibility: "visible", opacity: ".85" }} >
                     <div className="form-group" >
                         <label htmlFor="usernameInp" style={{ fontWeight: "bold" }}>User name</label>
                         <input type="text" onChange={username.onChange} className="form-control" id="usernameInp" placeholder="Username" style={{ border: "2px solid black" }} />
