@@ -3,7 +3,7 @@ const { db } = require('./model/db')
 const { postRoute } = require('./routes/posts')
 const core = require('cors')
 const app = express();
-const port = process.env.PORT || 5050
+const port = process.env.PORT || 9050
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -17,7 +17,7 @@ app.use('/', postRoute)
 db.sync()
   .then(() => {
     app.listen(port, () => {
-      console.log('server is runnig on http://localhost:5050')
+      console.log('server is runnig on http://localhost:9050')
     })
   })
   .catch((error) => {

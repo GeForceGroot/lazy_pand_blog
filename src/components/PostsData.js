@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 const PostsData = () => {
 
@@ -23,7 +23,7 @@ const PostsData = () => {
                 {/* Post-Card */}
                 {blogPosts && blogPosts.length > 0 ? (
                     blogPosts.map((post, index) => (
-                        <div key={index} className="card my-5" style={{ border: "2px solid black" }}>
+                        <div key={index} className="card my-5" style={{ border: "1px solid black" }}>
                             <span className="card-header" style={{
                                 fontWeight: "bold", fontSize: "20px", color: "whitesmoke", fontStyle: "oblique", background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898",
                                 backgroundBlendMode: "multiply"

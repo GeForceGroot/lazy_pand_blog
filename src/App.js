@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Posts from './components/Posts';
 import CreatePost from './components/CreatePost';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
-import Features from './components/Features';
 
 function App() {
   return (
@@ -19,12 +18,9 @@ function App() {
           <Route  path='/createPost'>
             <CreatePost />
           </Route>
-          <Route  path='/features'>
-            <Features />
-          </Route>
         </Switch>
       </Router >
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
